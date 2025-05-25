@@ -1,3 +1,7 @@
 intro/data/
 Anaconda3-2022.05-Linux-x86_64.sh
 intro/models/lin_reg.bin
+
+mlops-zoomcamp/
+homeworks/hw2/mlruns/1/6a05928a61d746f2bffb16205e3d4370/artifacts/model/python_env.yaml
+homeworks/hw2/mlruns/1/6a05928a61d746f2bffb16205e3d4370/artifacts/model/conda.yaml
