@@ -1,0 +1,41 @@
+Q1. Refactoring
+ How does the if statement that we use for this looks like?
+A: if __name__ == '__main__':
+
+Q2. Installing pytest
+What should be the other file?
+A: __init__.py
+
+Q3. Writing first unit test
+A: 2
+
+Q4. Mocking S3 with Localstack
+What option do we need to use for such purposes?
+A: --endpoint-url
+
+Q5. Creating test data
+What's the size of the file?
+A:3620
+
+Q6. Finish the integration test
+What's the sum of predicted durations for the test dataframe?
+A: 36.28
+
+aws --endpoint-url=http://localhost:4566 s3 mb s3://nyc-duration
+aws --endpoint-url=http://localhost:4566 --profile localstack s3 mb s3://nyc-duration
+aws --endpoint-url=http://localhost:4566 --profile localstack s3 ls
+
+aws --endpoint-url=http://localhost:4566 s3 ls
+
+
+export INPUT_FILE_PATTERN="s3://nyc-duration/in/{year:04d}-{month:02d}.parquet"
+export OUTPUT_FILE_PATTERN="s3://nyc-duration/out/{year:04d}-{month:02d}.parquet"
+
+export S3_ENDPOINT_URL=http://localhost:4566
+
+export AWS_PROFILE=localstack
+
+aws --endpoint-url=http://localhost:4566 --profile localstack s3 ls s3://nyc-duration
+
+aws --endpoint-url=http://localhost:4566 --profile localstack s3 ls s3://nyc-duration --recursive
+aws --endpoint-url=http://localhost:4566 --profile localstack s3 rm s3://nyc-duration --recursive
